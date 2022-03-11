@@ -1,24 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSpring, animated } from "react-spring";
+import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
-// import Button from '@mui/material/Button';
-const Home = () =>{
-    const history = useHistory();
 
-    const handleHome = () =>{
-        history.push('/verification')
-    }
+const Home = () => {
+  const [key, setKey] = useState(1);
+  const history = useHistory();
 
-    return(
-        <div className="home">
-            <h2 className="text-center">Welcome to voting app</h2>
-            <div className="text-center mt-5">
-                <button className="btn btn-warning" onClick={handleHome}>Get started</button>
-            </div>
+  const handleStart = () => {
+    history.push("/verification")
+  }
 
-            {/* <Button variant="contained">Get started</Button> */}
-
-        </div>
-    )
-}
+  const scrolling = useSpring({
+    from: { transform: "translateX(65%)" },
+    to: { transform: "translateX(-15%)" },
+    config: { duration: 8000 },
+    reverse: key % 2 == 0,
+    onRest: () => {
+      setKey(key + 1);
+    },
+  });
+  return (
+    <div className="home">
+      <animated.div className="text" style={scrolling}>
+        <h1>| Welcome To Voting App |</h1>
+      </animated.div>
+      <Button className="mt-5" variant="contained" color="secondary" onClick={handleStart} >
+        Get Started
+      </Button>
+    </div>
+  );
+};
 
 export default Home;

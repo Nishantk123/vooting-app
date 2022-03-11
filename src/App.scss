@@ -1,0 +1,135 @@
+.verification {
+  background-image: linear-gradient(
+    to right bottom,
+    #bac9df,
+    #92b3c7,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  min-height: 100vh;
+
+  .verification-header {
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(63, 3, 3);
+  }
+  .circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-top: -3px;
+    position: relative;
+  }
+  .circle-active {
+    border: 2px solid green;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-top: -3px;
+    background-color: green;
+    position: relative;
+  }
+  .horizontal-line {
+    border-top: 2px solid white;
+    width: 50%;
+    margin: auto;
+  }
+  .horizontal-line-active {
+    border-top: 2px solid green;
+    width: 50%;
+    margin: auto;
+  }
+  .age-box {
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 90%;
+  }
+  .birthday {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .age-header {
+    margin-left: 20%;
+    color: rgb(63, 3, 3);
+  }
+}
+
+.residence {
+  .residence-header {
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(63, 3, 3);
+  }
+  .residence-box {
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 90%;
+  }
+  input {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .res-header {
+    margin-left: 20%;
+    color: rgb(63, 3, 3);
+  }
+}
+
+.identity {
+  .identity-header {
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(63, 3, 3);
+  }
+  #file-upload {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .form-check{
+    margin-left: 20%;
+    margin-top: 10px;
+  }
+  .id-header {
+    margin-left: 20%;
+    color: rgb(63, 3, 3);
+  }
+  .delete {
+    cursor: "pointer";
+    background-color: rgb(51, 19, 192);
+    color: white;
+    max-width: 250px;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .img-preview {
+    max-height: 200px;
+    max-width: 200px;
+    margin-left: 20%;
+  }
+}
+
+.home {
+  text-align: center;
+  background-image: linear-gradient(
+    to left top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  min-height: 100vh;
+}
+.text {
+  width: 60%;
+  font-weight: bold;
+  padding-top: 200px;
+}
